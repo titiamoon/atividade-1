@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 12</title>
+</head>
+<body>
+    <script>
+    var numero1 = prompt("Digite o primeiro número:");
+        var numero2 = prompt("Digite o segundo número:");
+        var numero3 = prompt("Digite o terceiro número:");
+        var numero4 = prompt("Digite o quarto número:");
+        var numero5 = prompt("Digite o quinto número:");
+        var numeros = [num1, num2, num3, num4, num5];
+    
+            
+    localStorage.setItem("numeros", JSON.stringify(numeros));
+    
+    
+    var numerosSalvos = JSON.parse(localStorage.getItem("numeros"));
+    
+    
+    document.write("<h2>Números salvos:</h2>");
+    for (var i = 0; i < numerosSalvos.length; i++) {
+        document.write("<p>" + numerosSalvos[i] + "</p>");
+    }
+    </script>
+</body>
+</html>
